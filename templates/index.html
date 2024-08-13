@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="form">
+        <h1>Stroke Prediction Form</h1>
+        <form action="/predict" method="post">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <p>Men typically have a higher risk of stroke than women,
+                although women tend to have more severe outcomes and higher
+                mortality rates post-stroke.</p>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" step="0.1" required>          
+            <p>The risk of stroke increases significantly with age, especially after 55, due to the natural aging of the cardiovascular system.</p>
+            <br><br>
+
+            <label for="hypertension">Hypertension:</label>
+            <select name="hypertension" id="hypertension">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <p>High blood pressure is the most critical risk factor for stroke. It can damage blood vessels in the brain, making them more prone to rupture or blockage.</p>
+            <br><br>
+
+            <label for="heart_disease">Heart Disease:</label>
+            <select name="heart_disease" id="heart_disease">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <p>Conditions like atrial fibrillation and coronary artery disease increase the risk of blood clots, which can lead to a stroke.</p>
+            <br><br>
+
+            <label for="ever_married">Ever Married:</label>
+            <select name="ever_married" id="ever_married">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <p>Married individuals often have a lower risk of stroke, possibly due to better social support and healthier lifestyle habits encouraged by partners.</p>
+            <br><br>
+
+            <label for="work_type">Work Type:</label>
+            <select name="work_type" id="work_type">
+                <option value="Private">Private</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Govt_job">Government job</option>
+                <option value="children">Unemployed</option>
+            </select>
+            <p>Occupations that are sedentary or highly stressful can contribute to higher stroke risk, while physically active jobs might reduce it.</p>           
+            <br><br>
+
+            <label for="residence_type">Residence Type:</label>
+            <select name="Residence_type" id="Residence_type">
+                <option value="Urban">Urban</option>
+                <option value="Rural">Rural</option>
+            </select>
+            <p>Urban living might expose individuals to higher levels of pollution and stress, potentially increasing stroke risk, while rural areas might have less access to healthcare.</p> 
+            <br><br>
+
+            <label for="avg_glucose_level">Average Glucose Level:</label>
+            <input type="number" name="avg_glucose_level" id="avg_glucose_level" step="0.1" required>
+            <p>Elevated glucose levels, particularly in individuals with diabetes, can damage blood vessels, making strokes more likely.            </p>
+            <br><br>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" name="bmi" id="bmi" step="0.1" required>
+            <p>High BMI, indicative of obesity, is associated with various risk factors for stroke, including hypertension, diabetes, and heart disease.</p>
+            <br><br>
+
+            <label for="smoking_status">Smoking Status:</label>
+            <select name="smoking_status" id="smoking_status">
+                <option value="Unknown">Unknown</option>
+                <option value="smokes">Smokes</option>
+                <option value="never smoked">Never Smoked</option>
+                <option value="formerly smoked">Formerly Smoked</option>
+            </select>
+            <p>Smoking damages blood vessels, increases blood pressure, and reduces oxygen in the blood, all of which contribute to a higher stroke risk.</p>
+            <br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

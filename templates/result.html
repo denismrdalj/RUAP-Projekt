@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroke Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="result">
+        <h1>Stroke Prediction Result</h1>
+        <p>Prediction: <strong>{{ prediction }}</strong></p>
+        <p>Probability: <strong>{{ "%.5f" % (probability * 100) }}%</strong></p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
